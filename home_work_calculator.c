@@ -1,37 +1,37 @@
 #include <stdio.h>
-
+#include <string.h>
 
 
 int main(){
 
-     char opration;
+     char opration[10];
       int addition,subtraction,multiplication,division;
-       int fist_number,secend_number;
+       int first_number,second_number;
 
         printf("enter the number:");
-         scanf("%d %d",&fist_number,&secend_number);
+         scanf("%d %d",&first_number,&second_number);
           
           printf("enter the opration(+,-,*,/):");
-           scanf(" %c",&opration);
+           scanf(" %9s",&opration);
 
-                if(opration  == '+'){
-                   addition=fist_number+secend_number;
+                if(strcmp(opration  , "+")==0){
+                   addition=first_number+second_number;
                    printf("your result:%d\n",addition);
 
-                     }else if(opration == '-'){
-                      subtraction=fist_number-secend_number;
+                     }else if(strcmp(opration , "-")==0){
+                      subtraction=first_number-second_number;
                         printf("your result:%d\n",subtraction);
 
-                          }else if(opration =='*'){
-                            multiplication=fist_number*secend_number;
+                          }else if(strcmp(opration ,"*")==0){
+                            multiplication=first_number*second_number;
                              printf("your result:%d\n",multiplication);
 
-                                }else if(opration == '/'){
-                                  division=fist_number/secend_number;
+                                }else if(strcmp(opration , "/")==0){
+                                  division=first_number/second_number;
                                    printf("your result:%d\n",division);
        
               }else{
-               printf("invilite mathiod");
+               printf("invalid method");
 }
       
           
