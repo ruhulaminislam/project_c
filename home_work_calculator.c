@@ -1,39 +1,60 @@
 #include <stdio.h>
 #include <string.h>
 
+int main() {
+    char operation[10];
+    int addition, subtraction, multiplication, division;
+    int first_number, second_number;
+    float zakat;
 
-int main(){
+     printf("Enter the operation (operation, zakat): ");
+      scanf(" %9s", operation);
 
-     char opration[10];
-      int addition,subtraction,multiplication,division;
-       int first_number,second_number;
+if(strcmp(operation, "zakat") == 0) {
+        float amount;
+        printf("Enter the amount for zakat: ");
+        scanf("%f", &amount);
+        zakat = amount * 0.025;
+        printf("Your zakat is: %.2f\n", zakat);}else
 
-        printf("enter the number:");
-         scanf("%d %d",&first_number,&second_number);
-          
-          printf("enter the opration(+,-,*,/):");
-           scanf(" %9s",&opration);
+  if(strcmp(operation ,"operation")==0) {
+        printf("enter the operation:");
+        scanf("%2s",operation);
+    printf("Enter two numbers: ");
+    scanf("%d %d", &first_number, &second_number);
 
-                if(strcmp(opration  , "+")==0){
-                   addition=first_number+second_number;
-                   printf("your result:%d\n",addition);
+ 
 
-                     }else if(strcmp(opration , "-")==0){
-                      subtraction=first_number-second_number;
-                        printf("your result:%d\n",subtraction);
+    if (strcmp(operation, "+") == 0) {
+        addition = first_number + second_number;
+        printf("Your result: %d\n", addition);
 
-                          }else if(strcmp(opration ,"*")==0){
-                            multiplication=first_number*second_number;
-                             printf("your result:%d\n",multiplication);
+    } else if (strcmp(operation, "-") == 0) {
+        subtraction = first_number - second_number;
+        printf("Your result: %d\n", subtraction);
 
-                                }else if(strcmp(opration , "/")==0){
-                                  division=first_number/second_number;
-                                   printf("your result:%d\n",division);
-       
-              }else{
-               printf("invalid method");
-}
-      
-          
-  return 0;
+    } else if (strcmp(operation, "*") == 0) {
+        multiplication = first_number * second_number;
+        printf("Your result: %d\n", multiplication);
+
+    } else if (strcmp(operation, "/") == 0) {
+        if (second_number == 0) {
+            printf("Cannot divide by zero.\n");
+        } else {
+            division = first_number / second_number;
+            printf("Your result: %d\n", division);
+        }
+
+    } else if (strcmp(operation, "zakat") == 0) {
+        float amount;
+        printf("Enter the amount for zakat: ");
+        scanf("%f", &amount);
+        zakat = amount * 0.025;
+        printf("Your zakat is: %.2f\n", zakat);
+
+    } else {
+        printf("Invalid method\n");
+    }
+   }
+    return 0;
 }
