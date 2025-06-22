@@ -37,7 +37,7 @@ double n1 ,n2;
     }
   
 
-
+system("pause");
 
     return 0;
 }
