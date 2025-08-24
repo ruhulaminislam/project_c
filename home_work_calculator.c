@@ -56,5 +56,7 @@ if(strcmp(operation, "zakat") == 0) {
         printf("Invalid method\n");
     }
    }
+
+   system("pause");
     return 0;
 }
